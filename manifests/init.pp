@@ -6,6 +6,6 @@ class hpacucli () {
     mode   => '0700'
   }
 
-  class {"repo::hpacucli":} ->
+  class {"repo::repo::hpacucli":} ->
   exec {'/usr/bin/apt-get -q -y --allow-unauthenticated -o DPkg::Options::=--force-confold install hpacucli':}
 }
